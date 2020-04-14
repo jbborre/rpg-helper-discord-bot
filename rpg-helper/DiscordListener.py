@@ -21,7 +21,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('!hello'):
-        msg = 'Hello {0.author.mention}'.format(message)
+        msg = f'Hello {message.author.mention}'
         print(message)
         await message.channel.send(msg)
 
