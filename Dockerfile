@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.7.7
 
 # set a directory for the app
 WORKDIR /usr/src/app
@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # run the command
-CMD ["python", "./rpg-helper/DiscordListener.py"]
+CMD ["python", "DiscordListener.py"]
