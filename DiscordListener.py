@@ -2,6 +2,11 @@ import os
 import discord
 from discord.ext import commands
 from dao.RpgHelperDaoSqlLiteImpl import RpgHelperDaoSqlLiteImpl
+from dotenv import load_dotenv
+load_dotenv()
+
+# OR, the same with increased verbosity
+load_dotenv(verbose=True)
 
 print('Starting')
 bot = commands.Bot(command_prefix='!')
@@ -28,4 +33,4 @@ async def remove_inventory(ctx, arg):
     await ctx.send(f'removing inventory {arg}')
 
 
-bot.run(DISCORD_TOKEN)
+bot.run(os.getenv('DISCORD_TOKEN'))
