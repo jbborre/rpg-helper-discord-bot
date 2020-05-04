@@ -112,6 +112,9 @@ class RpgHelperDaoSqlLiteImpl(RpgHelperDao):
                                         channel_id TEXT NOT NULL,
                                         item TEXT NOT NULL
                                     ); """)
+                cursor.execute(""" CREATE INDEX chan_user_inv
+                                    ON inventory(channel_id, user_id); 
+                                    """)
                 conn.commit()
             except Error as error:
                 logging.error(msg=f'failure creating the database: {error}')
