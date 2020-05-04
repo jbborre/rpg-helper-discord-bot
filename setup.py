@@ -7,7 +7,7 @@ setup(name='rpg-helper',
       author='Jonathan Borre',
       author_email='jbborre@gmail.com',
       license='MIT',
-      packages=['rpg-helper'],
+      packages=['rpg_helper'],
       install_requires=[
           'discord',
           'python-dotenv'
